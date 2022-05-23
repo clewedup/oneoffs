@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>Set your preferences for this story:</p>
+<p>
+<input id="cbS" type="checkbox" onclick="hideClassByName('Sexy', 'cbS', 'debugS')">Less Smut</input>
+ <span id="debugS"></span></p>
+<p>
+<input id="cbD" type="checkbox" onclick="hideClassByName('Discursive', 'cbD', 'debugD')">Less Description</input>
+ <span id="debugD"></span></p>
+<p>
+  <input id="cbV" type="checkbox" onclick="hideClassByName('Violence', 'cbV', 'debugV')">Less Violence</input>
+  <span id="debugV"></span>
+</p><p>
+  <input id="cbT" type="checkbox" onclick="allcolors()">Show colorcoding</input>
+  <span id="debugT"></span>
+</p>
+
+
+
+<script>
+  function allcolors() {
+      var cb = document.getElementById('cbT');
+      if (cb.checked) {
+          colorclass('Discursive', 'lightblue');
+          colorclass('Violence', 'lightgreen');
+          colorclass('Sexy', 'pink');
+      }else{
+	  colorclass('Discursive', 'initial');
+	  colorclass('Violence', 'initial');
+	  colorclass('Sexy', 'initial');
+      }
+  }
+  
+  function colorclass(cname, ccolor){
+      var els = document.getElementsByClassName(cname);
+      for (var i = 0; i < els.length; i++) {
+	  els[i].style.backgroundColor = ccolor;
+      }
+  }
+
+  function hideClassByName(clname, cbname, dbname) {
+      var els = document.getElementsByClassName(clname);
+      var cb = document.getElementById(cbname);
+      var telltale = document.getElementById(dbname);
+      if (cb.checked) {
+	  for (var i = 0; i < els.length; i++) {
+	      els[i].style.display = "none";
+	  }
+	  telltale.innerHTML = " : " + els.length + " hidden.";
+      }else{
+	  for (var i = 0; i < els.length; i++) {
+	      els[i].style.display = "inline";
+	  }
+	  telltale.innerHTML = "";
+      }
+  }
+  
+</script>
+
+<h1>Story</h1>
+<h3><em>by</em> A. U. Thor</h3>
+
+<p> I had neither kith nor kin in England, and was therefore as free as air—or as free as an income of eleven shillings and sixpence a day will permit a man to be.<span id="Discursive1" class="Discursive"> Under such circumstances, I naturally gravitated to London, that great cesspool into which all the loungers and idlers of the Empire are irresistibly drained. <span class="Sexy">There I stayed for some time at a private hotel in the Strand, leading a comfortless, meaningless existence, and spending such money as I had, considerably more freely than I ought.</span> So alarming did the state of my finances become, that I soon realized that I must either leave the metropolis and rusticate somewhere in the country, or that I must make a complete alteration in my style of living. Choosing the latter alternative, I began by making up my mind to leave the hotel, and to take up my quarters in some less pretentious and less expensive domicile.</span>
+</p><p>
+On the very day that I had come to this conclusion, I was standing at the Criterion Bar, when some one tapped me on the shoulder, and turning round I recognized young Stamford, who had been a dresser under me at Barts. <span id="Discursive2" class="Discursive"> The sight of a friendly face in the great wilderness of London is a pleasant thing indeed to a lonely man. In old days Stamford had never been a particular crony of mine, but now I hailed him with enthusiasm, and he, in his turn, appeared to be delighted to see me. In the exuberance of my joy, I asked him to lunch with me at the Holborn, and we started off together in a hansom.</span>
+</p><p>
+“Whatever have you been doing with yourself, Watson?” he asked in undisguised wonder, as we rattled through the crowded London streets.<span class="Sexy"> “You are as thin as a lath and as brown as a nut.”</span>
+</p><p>
+I gave him a short sketch of my adventures, and had hardly concluded it by the time that we reached our destination.
+</p><p>
+“Poor devil!” he said, commiseratingly, after he had listened to my misfortunes. “What are you up to now?”
+</p><p>
+“Looking for lodgings.” I answered. <span class="Violence">“Trying to solve the problem as to whether it is possible to get comfortable rooms at a reasonable price.”</span>
+</p><p>
+“That’s a strange thing,” remarked my companion; “you are the second man to-day that has used that expression to me.”
+</p><p>
+“And who was the first?” I asked.
+</p><p>
+“A fellow who is working at the chemical laboratory up at the hospital. He was bemoaning himself this morning because he could not get someone to go halves with him in some nice rooms which he had found, and which were too much for his purse.”
+</p><p>
+“By Jove!” I cried, “if he really wants someone to share the rooms and the expense, I am the very man for him. I should prefer having a partner to being alone.”
+</p><p><span class="Violence">
+Young Stamford looked rather strangely at me over his wine-glass. “You don’t know Sherlock Holmes yet,” he said; “perhaps you would not care for him as a constant companion.”
+</span></p><p>
+“Why, what is there against him?”
+</p>
+
+</body>
+</html>
+
